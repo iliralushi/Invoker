@@ -73,7 +73,7 @@ SO UNIX hanno l'organizzazione dei processi **ad albero**.
 2) `init` fa partire servizi del kernel tramite `fork()` ed `exec().` Uno dei servizi è `getty` che è il **gestore del login su console.**
 3) `getty` una volta loggati fa partire la shell `bash` che esegue `ls.`
 
-![](Albero-Processi.png)
+![](../../../ProcessTree.png)
 
 **Esecuzione Programmi**
 `fork()` si occupa solo di clonare processi. I programmi vengono caricati tramite la funzione `execve().`

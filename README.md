@@ -1,4 +1,2 @@
-Appunti del corso di Informatica - Unimore 
-![](Images/Steamhappy.png)
+University Notes :D
 
-![](Providence.gif)

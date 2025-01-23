@@ -8,4 +8,4 @@ Il VFS da una visione omogenea e gerarchica al contenuto del file system ottenut
 
 **Utilità Visione Omogenea**
 
-![](../../../*Images/SO/08/VFS.png)
+![](../../*Images/SO/08/VFS.png)

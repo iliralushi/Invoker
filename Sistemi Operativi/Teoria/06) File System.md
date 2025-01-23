@@ -140,18 +140,18 @@ In caso di I/O **bufferizzato** un file aperto viene chiamato **stream** ed è i
 - La struct contiene il **file descriptor** che identifica l'elemento esatto sulla **tabella dei file aperti**, un puntatore al **buffer** di default, informazioni di stato dello stream.
 - Si ottiene tramite valore di ritorno della funzione `fopen().`
   
-![[File-FILE*.png]]
+![[Filedescriptor-File*.png]]
 
 **Funzioni I/O Diretto**
 
-![[IO-Diretto1.png]]
-![[IO-Diretto2.png]]
+![[Funzioni-IO-Diretto.png]]
+![[Funzioni-IO2-Diretto.png]]
 
 **Funzioni I/O Bufferizzato**
 
-![[IO-Buf1.png]]
-![[IO-Buf2.png]]
-![[IO-Buf3.png]]
+![[Funzioni-IO-Buffer.png]]
+![[Funzioni-IO2-Buffer.png]]
+![[Funzioni-IO3-Buffer.png]]
 
 **Directory**
 È un **file** contenente la coppia `(nome, puntatore).`
@@ -172,7 +172,7 @@ Una directory può essere rappresentata in diversi modi.
 - **Vertice Radice**: Directory **radice** del file system `(/ o C:\).`
 - **Archi**: Relazione tra directory e file.
 
-![[Grafo-Filesystem.png]]
+![[Directory-Grafo-Aciclico.png]]
 
 **Hard Link**
 Elementi delle directory possono ***puntare*** al contenuto dello stesso file.
@@ -188,7 +188,7 @@ Elementi delle directory possono ***puntare*** al contenuto dello stesso file.
 - **Vertice Radice**: Directory **radice** del file system `(/ o C:\).`
 - **Archi**: Relazione tra directory e file.
 
-![[Grafo-Ciclico.png]]
+![[Directory-Grafo-Ciclico.png]]
 
 **Soft Link**
 Sono in grado di **concludere cicli**. Il contenuto ed i metadati del file sono **unici**.
@@ -203,7 +203,7 @@ Sono in grado di **concludere cicli**. Il contenuto ed i metadati del file sono 
 - **Scenario**: Il comando `find` mostra i contenuti di un sottoalbero delle directory con un **soft link** alla directory di partenza. Si ha un ciclo infinito, viene gestito dalle apps.
 - L'immagine mostra il comando `find /home/andreoli -name andreoli -follow.`
 
-![[Cicli-Infiniti.png]]
+![[Ciclo-Infinito-Hardlink.png]]
 
 **Cancellazione File**
 L'hard link di un file **è un riferimento**. Si ha un contatore di hard links per un file.
@@ -215,7 +215,7 @@ Il contenuto del file non viene **fisicamente cancellato** ma staccato dal file 
 
 **Gestione Links**
 
-![[Links-C.png]]
+![[Funzioni-Link.png]]
 
 **Implementazione Directory I**
 È una **lista semplice** di strutture dati. Ciascuna lista contiene:
@@ -248,6 +248,6 @@ La directory viene gestita come uno stream di **record logici** di tipo `struct 
 
 **Gestione Directory**
 
-![[Gestione-Directory1.png]]![[Gestione-Directory2.png]]
+![[Funzioni-Directory.png]]![[Funzioni-Directory2.png]]
 
 **Aggancio Nuovo File System**

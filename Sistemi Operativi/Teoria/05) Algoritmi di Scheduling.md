@@ -8,7 +8,7 @@ Lo **scheduler** gestisce l'accesso alle risorse.
 2) **Algoritmo**: Pesca una richiesta dalla coda.
 3) **Dispatcher**: Assegna la richiesta alla risorsa.
 
-![[Modello.png]]
+![[Modello-Scheduler.png]]
 
 **Obiettivi Scheduler**
 1) Aumentare la produttività e l'assegnazione della risorsa.
@@ -64,7 +64,7 @@ Questo è uno scheduler senza prelazione, i processi non effettuano richieste ad
 
 **Indici da Considerare**
 
-![[Indice.png]]
+![[Indici-Di-Prestazione.png]]
 
 **Modello di Riferimento II**
 Questo è uno scheduler con prelazione. In aggiunta abbiamo il ritorno in coda del processo se viene interrotto. Un processo può **rientrare più volte in coda e più volte ricevere servizio**.
@@ -121,7 +121,7 @@ La durata del prossimo CPU burst viene trovato tramite **media esponenziale** de
   - `a = 1:` Consideri solo l'ultimo tempo.
   - `a = 1/2:` Stesso peso per entrambi.
 
-![[Media-Esponenziale.png]]
+![[Stima-CPU-Burst.png]]
 
 **Shortest Remaining Time First (SRTF)**
 Considera la prelazione. Un processo può essere fermato dallo scheduler.

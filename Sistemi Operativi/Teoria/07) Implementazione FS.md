@@ -51,7 +51,7 @@ Procedura con la quale un file system viene inizializzato su partizione o volume
 
 **Layout di EXT3**
 
-![[EXT3.png]]
+![[Filesystem-EXT3.png]]
 
 ### Allocazione Blocchi
 
@@ -126,7 +126,7 @@ Variante dell'assegnazione concatenata. All'inizio di ogni partizione viene dedi
 L'indice contenuto in un elemento della FAT punta al prossimo blocco del file. L'elemento che corrisponde all'ultimo blocco del file contiene un valore reale. Ciascun elemento della directory contiene l'indice del primo blocco in FAT.
 - **Implementazione Linux**: `$LINUX/fs/fat/fatent.c`
 
-![[FAT.png]]
+![[File-Allocation-Table.png]]
 
 **Svantaggi**
 - Un accesso in **lettura** al file comporta un accesso alla FAT per ogni blocco.
@@ -142,7 +142,7 @@ Ad un file è assegnato un **blocco indice**. Contiene una sequenza di indirizzi
 - Non appena creato un file il blocco indice è pieno di puntatori nulli.
 - Il puntatore `i-mo` contiene l'indirizzo `i-mo` del blocco `i-mo` del file.
 
-![[Assegnazione-Indicizzata.png]]
+![[Assegnazione-indicizzata.png]]
 
 **Vantaggi**
 - Il problema della frammentazione esterna è risolto. Un blocco del file può essere memorizzato in qualsiasi parte del disco.
@@ -222,7 +222,7 @@ Ciascun blocco del disco è un gigantesco vettore di bit.
 - **Parola Con Bit**: `*(vettore + offset parola).`
 - **Bit-i**: `parola_con_bit & (2^offset_bit).`
 
-![[Calcolo-Bit.png]]
+![[Calcolo-Blocco-Bitvector.png]]
 
 **Individuazione Efficiente**
 I processori moderni hanno istruzioni assembly che trovano in un clock il **primo** bit messo ad `1` in una parola di `16, 32, 64bit. Sono le istruzioni bsf, bsr.` 
@@ -245,7 +245,7 @@ La gestione della bitmap è affidata ad alcune funzioni di `$LINUX/fs/ext3/ext3.
 I blocchi liberi sono tutti collegati tra di loro tramite puntatori posti al loro stesso interno.
 - Il puntatore al primo blocco libero viene memorizzato in una posizione **speciale** e viene mantenuto in **memoria centrale**.
 
-![[Blocchi-Liberi-Lista.png]]
+![[Blocchi-Lista-Concatenata.png]]
 
 **Vantaggi**
 - Soluzione più semplice rispetto al vettore di bit.

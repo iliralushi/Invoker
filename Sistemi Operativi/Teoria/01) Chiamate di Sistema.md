@@ -15,7 +15,7 @@ Abbiamo una struttura **a guscio**.
 **Interazione Aplicazione-Kernel**
 Un'applicazione richiede un **servizio** al kernel. Il kernel **risponde** opportunamente alla richiesta e la manda all'applicazione.
 
-![](App-Kernel.png)
+![](Kernel-User-Mode.png)
 
 **User Mode e Kernel Mode**
 - **User Mode**: L'app in user mode **esegue calcoli** con **privilegi ridotti**. Per esempio, non ha il permesso di alterare la memoria di altre applicazioni o del kernel. La modalità protegge da usi **maliziosi/sbadati** dei permessi kernel mode.

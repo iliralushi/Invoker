@@ -21,7 +21,7 @@ Il PID è un **numero univoco** assegnato dal kernel per ogni singolo processo. 
 - **Pronto**: Si è verificato un evento. Il processo è pronto a ri/eseguire la sua esecuzione.
 - **Terminato**: Non c'è più codice da eseguire. Vengono liberate le risorse occupate e viene distrutto il processo
 
-![](Automa-Stati.png)
+![](Automa-Processi.png)
 
 **Linux: Esecuzione**
 Nei sistemi GNU/Linux gli stati **pronto** e **in esecuzione** vengono accorpati in `TASK_RUNNING.`
@@ -40,7 +40,7 @@ Il debugging di un processo in Linux è gestito in due stati:
 - `TASK_STOPPED:` Il processo è stato stoppato (`segnale CTRL+Z`).
 - `TASK_TRACED:` Il processo sta venendo tracciato da un debugger.
 
-![](Automa-Stati-Linux.png)
+![](Automa-Processi-Linux.png)
 
 **PCB**
 Quando viene creato un processo il kernel del SO crea una **struttura dati** detta **Process Control Block (PCB)** che contiene:
@@ -73,7 +73,7 @@ SO UNIX hanno l'organizzazione dei processi **ad albero**.
 2) `init` fa partire servizi del kernel tramite `fork()` ed `exec().` Uno dei servizi è `getty` che è il **gestore del login su console.**
 3) `getty` una volta loggati fa partire la shell `bash` che esegue `ls.`
 
-![](../../../ProcessTree.png)
+![](ProcessTree.png)
 
 **Esecuzione Programmi**
 `fork()` si occupa solo di clonare processi. I programmi vengono caricati tramite la funzione `execve().`

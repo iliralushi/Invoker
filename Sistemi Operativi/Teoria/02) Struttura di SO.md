@@ -58,4 +58,4 @@ Il kernel esegue solo i **servizi essenziali**, il resto è eseguito tramite **s
 Variante del **Micro Kernel** con una differenza; i driver dei dispositivi vengono eseguiti in **kernel mode**. 
 
 ![](Hybrid-Kernel.png)
-![](MVMVH.png)
+![](Macro-Vs-Micro-Vs-Hybrid.png)

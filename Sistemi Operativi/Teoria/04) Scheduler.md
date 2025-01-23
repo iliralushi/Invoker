@@ -3,7 +3,7 @@ Un processo in esecuzione si alterna a due fasi:
 1) **CPU Burst**: Elaborazione del kernel o dell'user.
 2) **Wait**: Attesa di I/O o evento.
 
-![[Comportamento-Processo.png]]
+![[Processo.png]]
 
 **Vincolazione**
 - **Resource Bound**: Un processo è resource bounded quando la sua performance è correlata alla **quantità di risorse disponibili**.
@@ -18,7 +18,7 @@ Un processo in esecuzione si alterna a due fasi:
 - **Processo CPU-Bound**: Produce **poche** sequenze di CPU Burst lunghe e fa **poche** richieste di I/O.
 - **Processo I/O-Bound**: Processo che produce **molte** sequenze di CPU Burst corte e fa **molte** richieste di I/O.
 
-![[CPU-IO-Bound.png]]
+![[Processi-CPU-IO-Bound.png]]
 
 **Processi Importanti**
 1) **Sistema Desktop**: Interattività con l'utente **elevata**. Abbiamo molte richieste di I/O e dispositivi come disco e rete. Si prediligono i **processi I/O-bound**.

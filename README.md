@@ -1,3 +1,3 @@
 University Notes :D
 
-![](50.gif)
+![](../Images/50.gif)
